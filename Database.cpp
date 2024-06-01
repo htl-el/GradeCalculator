@@ -1,6 +1,7 @@
 #include "Database.hpp"
 #include <string>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -73,13 +74,14 @@ float Database::calculateAverage()
 
     while (getline(reader, line))
     {
-        size_t pos = line.find_last_of(" ");
-        if (pos != string::npos)
-        {
-            float grade = stof(line.substr(pos + 1));
-            sum += grade;
-            count++;
-        }
+        istringstream iss(line);
+        string subject;
+        float grade;
+
+        iss >> subject >> grade;
+
+        sum += grade;
+        count++;
     }
 
     reader.close();
@@ -92,3 +94,31 @@ float Database::calculateAverage()
     return sum / count;
 }
 
+bool Database::isPositive()
+{
+    ifstream reader(this->path);
+    string line;
+
+    while (getline(reader, line))
+    {
+        istringstream iss(line);
+        string subject;
+        float grade;
+
+        iss >> subject >> grade;
+
+        if (grade >= 4.5)
+        {
+            reader.close();
+            return false;
+        }
+    }
+    reader.close();
+
+    return true;
+}
+
+void Database::setPath(string path)
+{
+    this->path = path;
+}
