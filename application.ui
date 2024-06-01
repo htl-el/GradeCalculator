@@ -44,58 +44,6 @@
      </date>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>40</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>add Subject</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>40</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>add Grade</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>40</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>add Test</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>40</y>
-      <width>101</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>remove Subject</string>
-    </property>
-   </widget>
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
@@ -137,11 +85,67 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuGradeCalculator">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actiondfgdfg"/>
+    <addaction name="actiondfgdfg_2"/>
+    <addaction name="actiondfg"/>
+    <addaction name="actiondfg_2"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuExtras">
+    <property name="title">
+     <string>Extras</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuCredits">
+    <property name="title">
+     <string>Credits</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSupport">
+    <property name="title">
+     <string>Support</string>
+    </property>
+   </widget>
+   <addaction name="menuGradeCalculator"/>
+   <addaction name="menuExtras"/>
+   <addaction name="menuCredits"/>
+   <addaction name="menuSupport"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actiondfgdfg">
+   <property name="text">
+    <string>Add Subject</string>
+   </property>
+  </action>
+  <action name="actiondfgdfg_2">
+   <property name="text">
+    <string>Add Grade</string>
+   </property>
+  </action>
+  <action name="actiondfg">
+   <property name="text">
+    <string>Remove Grade</string>
+   </property>
+  </action>
+  <action name="actiondfg_2">
+   <property name="text">
+    <string>Remove Subject</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
