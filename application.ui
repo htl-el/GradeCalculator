@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>819</width>
+    <height>598</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -216,8 +216,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>819</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuExtras">
@@ -237,32 +237,32 @@
     <property name="title">
      <string>Options</string>
     </property>
-    <addaction name="AddSubject"/>
-    <addaction name="AddGrade"/>
-    <addaction name="RemoveGrade"/>
-    <addaction name="actiondfg_2"/>
+    <addaction name="addSubject"/>
+    <addaction name="addGrade"/>
+    <addaction name="removeGrade"/>
+    <addaction name="removeSubject"/>
    </widget>
    <addaction name="Options"/>
    <addaction name="menuExtras"/>
    <addaction name="menuCredits"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="AddSubject">
+  <action name="addSubject">
    <property name="text">
     <string>Add Subject</string>
    </property>
   </action>
-  <action name="AddGrade">
+  <action name="addGrade">
    <property name="text">
     <string>Add Grade</string>
    </property>
   </action>
-  <action name="RemoveGrade">
+  <action name="removeGrade">
    <property name="text">
     <string>Remove Grade</string>
    </property>
   </action>
-  <action name="actiondfg_2">
+  <action name="removeSubject">
    <property name="text">
     <string>Remove Subject</string>
    </property>

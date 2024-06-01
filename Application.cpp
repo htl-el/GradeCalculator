@@ -11,3 +11,28 @@ Application::~Application()
 {
     delete ui;
 }
+
+
+void Application::on_addSubject_triggered(bool checked)
+{
+
+}
+
+
+void Application::on_addGrade_triggered(bool checked)
+{
+
+}
+
+
+void Application::on_removeGrade_triggered(bool checked)
+{
+
+}
+
+
+void Application::on_removeSubject_triggered(bool checked)
+{
+
+}
+

@@ -18,6 +18,19 @@ public:
     Application(QWidget *parent = nullptr);
     ~Application();
 
+private slots:
+    void on_actiondfg_2_triggered(bool checked);
+
+    void on_AddSubject_triggered(bool checked);
+
+    void on_addSubject_triggered(bool checked);
+
+    void on_addGrade_triggered(bool checked);
+
+    void on_removeGrade_triggered(bool checked);
+
+    void on_removeSubject_triggered(bool checked);
+
 private:
     Ui::Application *ui;
 };
