@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-d1a257a68c3d75265d10.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GradeCalculator-QT",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GradeCalculator-QT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GradeCalculator-QT-RelWithDebInfo-973108e176f77b6a0a15.json",
+					"name" : "GradeCalculator-QT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GradeCalculator-QT_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GradeCalculator-QT_autogen-RelWithDebInfo-54f351a3d3c9f9180d19.json",
+					"name" : "GradeCalculator-QT_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GradeCalculator-QT_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GradeCalculator-QT_autogen_timestamp_deps-RelWithDebInfo-4e4aaa3966d47b83733b.json",
+					"name" : "GradeCalculator-QT_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/Coden/GradeCalculator/build/Desktop_Qt_6_7_1_MinGW_64_bit-Profile",
+		"source" : "F:/Coden/GradeCalculator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
