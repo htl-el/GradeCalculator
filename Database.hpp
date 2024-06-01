@@ -10,18 +10,13 @@ class Database
 {
 private:
     string path;
-    vector<string> Subjects;
-    vector<float> Grades;
 
 public:
     Database(string path);
 
     void addSubject(string subject, float grade);
     void setGrade(string subject, float grade);
-    void addTest(string subject, string name, float points);
-
-    void writeFile();
-    void readFile(string path);
+    void addTest(string subject, string text, float grade, int points);
 
     float calculateAverage();
     bool isPositive();
