@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-RelWithDebInfo-d1a257a68c3d75265d10.json",
+					"jsonFile" : "directory-.-RelWithDebInfo-e1cf230fd126d9f9bf67.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GradeCalculator-QT::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GradeCalculator-QT-RelWithDebInfo-973108e176f77b6a0a15.json",
+					"jsonFile" : "target-GradeCalculator-QT-RelWithDebInfo-f8e3ba3113d7ed5e7ece.json",
 					"name" : "GradeCalculator-QT",
 					"projectIndex" : 0
 				},

@@ -176,7 +176,7 @@ build GradeCalculator-QT_autogen_timestamp_deps: phony CMakeFiles/GradeCalculato
 #############################################
 # Utility command for GradeCalculator-QT_autogen
 
-build GradeCalculator-QT_autogen: phony CMakeFiles/GradeCalculator-QT_autogen GradeCalculator-QT_autogen/include/ui_application.h GradeCalculator-QT_autogen/timestamp GradeCalculator-QT_autogen/mocs_compilation.cpp GradeCalculator-QT_autogen_timestamp_deps
+build GradeCalculator-QT_autogen: phony CMakeFiles/GradeCalculator-QT_autogen GradeCalculator-QT_autogen/include/ui_application.h GradeCalculator-QT_autogen/include/ui_addSubjectForm.h GradeCalculator-QT_autogen/timestamp GradeCalculator-QT_autogen/mocs_compilation.cpp GradeCalculator-QT_autogen_timestamp_deps
 
 
 #############################################
@@ -198,7 +198,7 @@ build CMakeFiles/GradeCalculator-QT_autogen_timestamp_deps | ${cmake_ninja_workd
 #############################################
 # Phony custom command for CMakeFiles\GradeCalculator-QT_autogen
 
-build CMakeFiles/GradeCalculator-QT_autogen GradeCalculator-QT_autogen/include/ui_application.h | ${cmake_ninja_workdir}CMakeFiles/GradeCalculator-QT_autogen ${cmake_ninja_workdir}GradeCalculator-QT_autogen/include/ui_application.h: phony GradeCalculator-QT_autogen/timestamp || GradeCalculator-QT_autogen_timestamp_deps
+build CMakeFiles/GradeCalculator-QT_autogen GradeCalculator-QT_autogen/include/ui_application.h GradeCalculator-QT_autogen/include/ui_addSubjectForm.h | ${cmake_ninja_workdir}CMakeFiles/GradeCalculator-QT_autogen ${cmake_ninja_workdir}GradeCalculator-QT_autogen/include/ui_application.h ${cmake_ninja_workdir}GradeCalculator-QT_autogen/include/ui_addSubjectForm.h: phony GradeCalculator-QT_autogen/timestamp || GradeCalculator-QT_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
