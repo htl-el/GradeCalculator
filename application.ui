@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>70</y>
+      <y>50</y>
       <width>201</width>
-      <height>481</height>
+      <height>491</height>
      </rect>
     </property>
    </widget>
@@ -28,9 +28,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
+      <y>10</y>
       <width>201</width>
-      <height>25</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="displayFormat">
@@ -48,9 +48,9 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>70</y>
+      <y>10</y>
       <width>571</width>
-      <height>481</height>
+      <height>441</height>
      </rect>
     </property>
     <property name="iconSize">
@@ -62,21 +62,153 @@
     <property name="gridStyle">
      <enum>Qt::SolidLine</enum>
     </property>
+    <property name="rowCount">
+     <number>14</number>
+    </property>
+    <property name="columnCount">
+     <number>5</number>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderStretchLastSection">
+     <bool>false</bool>
+    </attribute>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
     <column>
      <property name="text">
       <string>Test</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
      </property>
     </column>
     <column>
      <property name="text">
       <string>Note</string>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
     </column>
     <column>
      <property name="text">
-      <string>Gesamt Note</string>
+      <string>Punkte</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
      </property>
     </column>
+    <column>
+     <property name="text">
+      <string>Datum</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Halbjahr</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+    </column>
+   </widget>
+   <widget class="QListWidget" name="listWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>460</y>
+      <width>571</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Jahr:</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Durchschnitt:</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Positiv:</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Schlechteste Note:</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -85,26 +217,9 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuGradeCalculator">
-    <property name="title">
-     <string>Options</string>
-    </property>
-    <addaction name="actiondfgdfg"/>
-    <addaction name="actiondfgdfg_2"/>
-    <addaction name="actiondfg"/>
-    <addaction name="actiondfg_2"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-    <addaction name="separator"/>
-   </widget>
    <widget class="QMenu" name="menuExtras">
     <property name="title">
      <string>Extras</string>
@@ -114,29 +229,35 @@
     <property name="title">
      <string>Credits</string>
     </property>
+    <addaction name="actionImpressum"/>
+    <addaction name="actionKontakt"/>
+    <addaction name="actionHilfe"/>
    </widget>
-   <widget class="QMenu" name="menuSupport">
+   <widget class="QMenu" name="Options">
     <property name="title">
-     <string>Support</string>
+     <string>Options</string>
     </property>
+    <addaction name="AddSubject"/>
+    <addaction name="AddGrade"/>
+    <addaction name="RemoveGrade"/>
+    <addaction name="actiondfg_2"/>
    </widget>
-   <addaction name="menuGradeCalculator"/>
+   <addaction name="Options"/>
    <addaction name="menuExtras"/>
    <addaction name="menuCredits"/>
-   <addaction name="menuSupport"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actiondfgdfg">
+  <action name="AddSubject">
    <property name="text">
     <string>Add Subject</string>
    </property>
   </action>
-  <action name="actiondfgdfg_2">
+  <action name="AddGrade">
    <property name="text">
     <string>Add Grade</string>
    </property>
   </action>
-  <action name="actiondfg">
+  <action name="RemoveGrade">
    <property name="text">
     <string>Remove Grade</string>
    </property>
@@ -144,6 +265,21 @@
   <action name="actiondfg_2">
    <property name="text">
     <string>Remove Subject</string>
+   </property>
+  </action>
+  <action name="actionImpressum">
+   <property name="text">
+    <string>Impressum</string>
+   </property>
+  </action>
+  <action name="actionKontakt">
+   <property name="text">
+    <string>Kontakt</string>
+   </property>
+  </action>
+  <action name="actionHilfe">
+   <property name="text">
+    <string>Hilfe</string>
    </property>
   </action>
  </widget>

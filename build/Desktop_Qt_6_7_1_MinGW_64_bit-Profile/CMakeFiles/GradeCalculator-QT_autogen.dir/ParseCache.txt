@@ -355,5 +355,5 @@ F:/Coden/GradeCalculator/Application.hpp
 F:/Coden/GradeCalculator/Database.hpp
 F:/Coden/GradeCalculator/Application.cpp
  uic:./ui_application.h
-F:/Coden/GradeCalculator/main.cpp
 F:/Coden/GradeCalculator/Database.cpp
+F:/Coden/GradeCalculator/main.cpp

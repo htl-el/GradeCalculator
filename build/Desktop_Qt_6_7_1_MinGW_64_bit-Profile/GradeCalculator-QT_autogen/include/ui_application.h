@@ -11,14 +11,14 @@
 
 #include <QtCore/QDate>
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
@@ -28,16 +28,22 @@ QT_BEGIN_NAMESPACE
 class Ui_Application
 {
 public:
+    QAction *AddSubject;
+    QAction *AddGrade;
+    QAction *RemoveGrade;
+    QAction *actiondfg_2;
+    QAction *actionImpressum;
+    QAction *actionKontakt;
+    QAction *actionHilfe;
     QWidget *centralwidget;
     QListWidget *listWidget;
-    QComboBox *comboBox_2;
     QDateEdit *dateEdit;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
     QTableWidget *tableWidget;
+    QListWidget *listWidget_2;
     QMenuBar *menubar;
+    QMenu *menuExtras;
+    QMenu *menuCredits;
+    QMenu *Options;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *Application)
@@ -45,49 +51,100 @@ public:
         if (Application->objectName().isEmpty())
             Application->setObjectName("Application");
         Application->resize(800, 600);
+        AddSubject = new QAction(Application);
+        AddSubject->setObjectName("AddSubject");
+        AddGrade = new QAction(Application);
+        AddGrade->setObjectName("AddGrade");
+        RemoveGrade = new QAction(Application);
+        RemoveGrade->setObjectName("RemoveGrade");
+        actiondfg_2 = new QAction(Application);
+        actiondfg_2->setObjectName("actiondfg_2");
+        actionImpressum = new QAction(Application);
+        actionImpressum->setObjectName("actionImpressum");
+        actionKontakt = new QAction(Application);
+        actionKontakt->setObjectName("actionKontakt");
+        actionHilfe = new QAction(Application);
+        actionHilfe->setObjectName("actionHilfe");
         centralwidget = new QWidget(Application);
         centralwidget->setObjectName("centralwidget");
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName("listWidget");
-        listWidget->setGeometry(QRect(10, 70, 201, 481));
-        comboBox_2 = new QComboBox(centralwidget);
-        comboBox_2->setObjectName("comboBox_2");
-        comboBox_2->setGeometry(QRect(220, 40, 571, 24));
+        listWidget->setGeometry(QRect(10, 50, 201, 491));
         dateEdit = new QDateEdit(centralwidget);
         dateEdit->setObjectName("dateEdit");
-        dateEdit->setGeometry(QRect(10, 40, 201, 25));
+        dateEdit->setGeometry(QRect(10, 10, 201, 31));
         dateEdit->setDate(QDate(2020, 1, 1));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(220, 70, 80, 24));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(310, 70, 80, 24));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(400, 70, 80, 24));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(490, 70, 101, 24));
         tableWidget = new QTableWidget(centralwidget);
-        if (tableWidget->columnCount() < 3)
-            tableWidget->setColumnCount(3);
+        if (tableWidget->columnCount() < 5)
+            tableWidget->setColumnCount(5);
+        QFont font;
+        font.setPointSize(10);
+        font.setBold(true);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        __qtablewidgetitem->setFont(font);
         tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        __qtablewidgetitem1->setFont(font);
         tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        __qtablewidgetitem2->setFont(font);
         tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
+        __qtablewidgetitem3->setFont(font);
+        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        __qtablewidgetitem4->setFont(font);
+        tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
+        if (tableWidget->rowCount() < 14)
+            tableWidget->setRowCount(14);
         tableWidget->setObjectName("tableWidget");
-        tableWidget->setGeometry(QRect(220, 100, 571, 451));
+        tableWidget->setGeometry(QRect(220, 10, 571, 441));
+        tableWidget->setIconSize(QSize(0, 0));
+        tableWidget->setGridStyle(Qt::SolidLine);
+        tableWidget->setRowCount(14);
+        tableWidget->setColumnCount(5);
+        tableWidget->horizontalHeader()->setCascadingSectionResizes(false);
+        tableWidget->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
+        tableWidget->horizontalHeader()->setStretchLastSection(true);
+        tableWidget->verticalHeader()->setCascadingSectionResizes(false);
+        tableWidget->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
+        tableWidget->verticalHeader()->setStretchLastSection(false);
+        listWidget_2 = new QListWidget(centralwidget);
+        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem->setFont(font);
+        QListWidgetItem *__qlistwidgetitem1 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem1->setFont(font);
+        QListWidgetItem *__qlistwidgetitem2 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem2->setFont(font);
+        QListWidgetItem *__qlistwidgetitem3 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem3->setFont(font);
+        listWidget_2->setObjectName("listWidget_2");
+        listWidget_2->setGeometry(QRect(220, 460, 571, 81));
         Application->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Application);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 800, 21));
+        menuExtras = new QMenu(menubar);
+        menuExtras->setObjectName("menuExtras");
+        menuCredits = new QMenu(menubar);
+        menuCredits->setObjectName("menuCredits");
+        Options = new QMenu(menubar);
+        Options->setObjectName("Options");
         Application->setMenuBar(menubar);
         statusbar = new QStatusBar(Application);
         statusbar->setObjectName("statusbar");
         Application->setStatusBar(statusbar);
+
+        menubar->addAction(Options->menuAction());
+        menubar->addAction(menuExtras->menuAction());
+        menubar->addAction(menuCredits->menuAction());
+        menuCredits->addAction(actionImpressum);
+        menuCredits->addAction(actionKontakt);
+        menuCredits->addAction(actionHilfe);
+        Options->addAction(AddSubject);
+        Options->addAction(AddGrade);
+        Options->addAction(RemoveGrade);
+        Options->addAction(actiondfg_2);
 
         retranslateUi(Application);
 
@@ -97,17 +154,40 @@ public:
     void retranslateUi(QMainWindow *Application)
     {
         Application->setWindowTitle(QCoreApplication::translate("Application", "Application", nullptr));
+        AddSubject->setText(QCoreApplication::translate("Application", "Add Subject", nullptr));
+        AddGrade->setText(QCoreApplication::translate("Application", "Add Grade", nullptr));
+        RemoveGrade->setText(QCoreApplication::translate("Application", "Remove Grade", nullptr));
+        actiondfg_2->setText(QCoreApplication::translate("Application", "Remove Subject", nullptr));
+        actionImpressum->setText(QCoreApplication::translate("Application", "Impressum", nullptr));
+        actionKontakt->setText(QCoreApplication::translate("Application", "Kontakt", nullptr));
+        actionHilfe->setText(QCoreApplication::translate("Application", "Hilfe", nullptr));
         dateEdit->setDisplayFormat(QCoreApplication::translate("Application", "yyyy", nullptr));
-        pushButton->setText(QCoreApplication::translate("Application", "add Subject", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Application", "add Grade", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Application", "add Test", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("Application", "remove Subject", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QCoreApplication::translate("Application", "Test", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QCoreApplication::translate("Application", "Note", nullptr));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QCoreApplication::translate("Application", "Gesamt Note", nullptr));
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("Application", "Punkte", nullptr));
+        QTableWidgetItem *___qtablewidgetitem3 = tableWidget->horizontalHeaderItem(3);
+        ___qtablewidgetitem3->setText(QCoreApplication::translate("Application", "Datum", nullptr));
+        QTableWidgetItem *___qtablewidgetitem4 = tableWidget->horizontalHeaderItem(4);
+        ___qtablewidgetitem4->setText(QCoreApplication::translate("Application", "Halbjahr", nullptr));
+
+        const bool __sortingEnabled = listWidget_2->isSortingEnabled();
+        listWidget_2->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = listWidget_2->item(0);
+        ___qlistwidgetitem->setText(QCoreApplication::translate("Application", "Jahr:", nullptr));
+        QListWidgetItem *___qlistwidgetitem1 = listWidget_2->item(1);
+        ___qlistwidgetitem1->setText(QCoreApplication::translate("Application", "Durchschnitt:", nullptr));
+        QListWidgetItem *___qlistwidgetitem2 = listWidget_2->item(2);
+        ___qlistwidgetitem2->setText(QCoreApplication::translate("Application", "Positiv:", nullptr));
+        QListWidgetItem *___qlistwidgetitem3 = listWidget_2->item(3);
+        ___qlistwidgetitem3->setText(QCoreApplication::translate("Application", "Schlechteste Note:", nullptr));
+        listWidget_2->setSortingEnabled(__sortingEnabled);
+
+        menuExtras->setTitle(QCoreApplication::translate("Application", "Extras", nullptr));
+        menuCredits->setTitle(QCoreApplication::translate("Application", "Credits", nullptr));
+        Options->setTitle(QCoreApplication::translate("Application", "Options", nullptr));
     } // retranslateUi
 
 };
