@@ -36,7 +36,6 @@ public:
     QAction *actionKontakt;
     QAction *actionHilfe;
     QWidget *centralwidget;
-    QListWidget *listWidget;
     QDateEdit *dateEdit;
     QTableWidget *tableWidget;
     QListWidget *listWidget_2;
@@ -67,9 +66,6 @@ public:
         actionHilfe->setObjectName("actionHilfe");
         centralwidget = new QWidget(Application);
         centralwidget->setObjectName("centralwidget");
-        listWidget = new QListWidget(centralwidget);
-        listWidget->setObjectName("listWidget");
-        listWidget->setGeometry(QRect(10, 50, 201, 491));
         dateEdit = new QDateEdit(centralwidget);
         dateEdit->setObjectName("dateEdit");
         dateEdit->setGeometry(QRect(10, 10, 201, 31));

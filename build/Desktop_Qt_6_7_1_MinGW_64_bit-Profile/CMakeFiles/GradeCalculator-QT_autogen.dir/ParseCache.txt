@@ -148,6 +148,7 @@ F:/Coden/GradeCalculator/Application.hpp
  mdp:C:/Qt/6.7.1/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.7.1/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.7.1/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/QListView
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/QMainWindow
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/QTableWidget
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/QVBoxLayout
@@ -162,6 +163,7 @@ F:/Coden/GradeCalculator/Application.hpp
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/qlayout.h
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/qlistview.h
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/qrubberband.h
  mdp:C:/Qt/6.7.1/mingw_64/include/QtWidgets/qsizepolicy.h
@@ -380,5 +382,5 @@ F:/Coden/GradeCalculator/Application.hpp
 F:/Coden/GradeCalculator/Database.hpp
 F:/Coden/GradeCalculator/Application.cpp
  uic:./ui_application.h
-F:/Coden/GradeCalculator/main.cpp
 F:/Coden/GradeCalculator/Database.cpp
+F:/Coden/GradeCalculator/main.cpp

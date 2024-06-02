@@ -36,14 +36,14 @@ namespace {
 struct qt_meta_stringdata_CLASSApplicationENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSApplicationENDCLASS = QtMocHelpers::stringData(
     "Application",
-    "on_actiondfg_2_triggered",
+    "on_addSubject_triggered",
     "",
     "checked",
-    "on_AddSubject_triggered",
-    "on_addSubject_triggered",
     "on_addGrade_triggered",
     "on_removeGrade_triggered",
-    "on_removeSubject_triggered"
+    "on_removeSubject_triggered",
+    "on_listView_objectNameChanged",
+    "objectName"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -56,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSApplicationENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,20 +64,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSApplicationENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   50,    2, 0x08,    1 /* Private */,
-       4,    1,   53,    2, 0x08,    3 /* Private */,
-       5,    1,   56,    2, 0x08,    5 /* Private */,
-       6,    1,   59,    2, 0x08,    7 /* Private */,
-       7,    1,   62,    2, 0x08,    9 /* Private */,
-       8,    1,   65,    2, 0x08,   11 /* Private */,
+       1,    1,   44,    2, 0x08,    1 /* Private */,
+       4,    1,   47,    2, 0x08,    3 /* Private */,
+       5,    1,   50,    2, 0x08,    5 /* Private */,
+       6,    1,   53,    2, 0x08,    7 /* Private */,
+       7,    1,   56,    2, 0x08,    9 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    3,
     QMetaType::Void, QMetaType::Bool,    3,
     QMetaType::Void, QMetaType::Bool,    3,
     QMetaType::Void, QMetaType::Bool,    3,
-    QMetaType::Void, QMetaType::Bool,    3,
-    QMetaType::Void, QMetaType::Bool,    3,
+    QMetaType::Void, QMetaType::QString,    8,
 
        0        // eod
 };
@@ -91,12 +89,6 @@ Q_CONSTINIT const QMetaObject Application::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSApplicationENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Application, std::true_type>,
-        // method 'on_actiondfg_2_triggered'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        // method 'on_AddSubject_triggered'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'on_addSubject_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
@@ -108,7 +100,10 @@ Q_CONSTINIT const QMetaObject Application::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'on_removeSubject_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'on_listView_objectNameChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
     >,
     nullptr
 } };
@@ -147,13 +142,13 @@ int Application::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 5;
     }
     return _id;
 }

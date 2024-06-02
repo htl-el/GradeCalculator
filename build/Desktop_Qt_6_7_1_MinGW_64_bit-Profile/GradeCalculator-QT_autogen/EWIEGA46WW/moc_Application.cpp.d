@@ -147,6 +147,7 @@ F:/Coden/GradeCalculator/build/Desktop_Qt_6_7_1_MinGW_64_bit-Profile/GradeCalcul
   C:/Qt/6.7.1/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.7.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.1/mingw_64/include/QtWidgets/QListView \
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/QTableWidget \
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/QVBoxLayout \
@@ -161,6 +162,7 @@ F:/Coden/GradeCalculator/build/Desktop_Qt_6_7_1_MinGW_64_bit-Profile/GradeCalcul
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+  C:/Qt/6.7.1/mingw_64/include/QtWidgets/qlistview.h \
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.7.1/mingw_64/include/QtWidgets/qsizepolicy.h \
