@@ -6,26 +6,45 @@
 #include <QTableWidgetItem>
 #include <QVBoxLayout>
 #include <QWidget>
+#include <QStringListModel>
+#include <QStandardItemModel>
 
 Application::Application(QWidget *parent) : QMainWindow(parent), ui(new Ui::Application)
-{
+{  
     ui->setupUi(this);
 
-    // Initialisieren des QTableWidget
-    tableWidget = new QTableWidget(4, 3, this); // 4 Zeilen, 3 Spalten
-    tableWidget->setHorizontalHeaderLabels({"Spalte 1", "Spalte 2", "Spalte 3"});
+    // Initialisiere das QListView als Mitglied von Application
+    listView = new QListView(this);
+    listView->setFixedSize(200, 500); // Setze die Größe des QListView auf 200x100 Pixel
 
-    // Daten in die Tabelle schreiben
-    tableWidget->setItem(0, 0, new QTableWidgetItem("Zeile 1, Spalte 1"));
-    tableWidget->setItem(0, 1, new QTableWidgetItem("Zeile 1, Spalte 2"));
-    tableWidget->setItem(0, 2, new QTableWidgetItem("Zeile 1, Spalte 3"));
+    // Initialisiere das Modell
+    QStandardItemModel *model = new QStandardItemModel(this);
 
-    tableWidget->setItem(1, 0, new QTableWidgetItem("Zeile 2, Spalte 1"));
-    tableWidget->setItem(1, 1, new QTableWidgetItem("Zeile 2, Spalte 2"));
-    tableWidget->setItem(1, 2, new QTableWidgetItem("Zeile 2, Spalte 3"));
+    // Füge die Items hinzu und setze sie auf read-only
+    QList<QStandardItem *> items;
+    items.append(new QStandardItem("Item 1"));
+    items.append(new QStandardItem("Item 2"));
+    items.append(new QStandardItem("Item 3"));
+    items.append(new QStandardItem("Item 1"));
+    items.append(new QStandardItem("Item 2"));
+    items.append(new QStandardItem("Item 3"));
+    items.append(new QStandardItem("Item 1"));
+    items.append(new QStandardItem("Item 2"));
+    items.append(new QStandardItem("Item 3"));
 
-    // Fügen Sie den QTableWidget dem Layout hinzu
-    ui->centralwidget->layout()->addWidget(tableWidget);
+    for (QStandardItem *item : items)
+    {
+        item->setEditable(false);  // Setze das Item auf read-only
+        model->appendRow(item);
+    }
+
+    // Setze das Modell auf das QListView
+    listView->setModel(model);
+
+    // Füge das QListView dem Layout des zentralen Widgets hinzu
+    QVBoxLayout *layout = new QVBoxLayout(ui->centralwidget);
+    layout->addWidget(listView);
+    ui->centralwidget->setLayout(layout);
 }
 
 Application::~Application()
@@ -57,3 +76,9 @@ void Application::on_removeSubject_triggered(bool checked)
 
 }
 
+
+void Application::listSubjects(unsigned int year)
+{
+    QListView* listView = new QListView();
+    listView->setItemAlignment(Qt::AlignCenter);
+}

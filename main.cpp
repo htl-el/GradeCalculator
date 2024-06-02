@@ -8,10 +8,10 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     Application w;
 
-    Application demo;
+   /* Application demo;
     demo.setWindowTitle("QTableWidget Demo");
     demo.setGeometry(100, 100, 600, 400);
-    demo.show();
+    demo.show();*/
 
 
     w.show();

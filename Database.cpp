@@ -3,12 +3,15 @@
 #include <fstream>
 #include <sstream>
 
+
 using namespace std;
+
 
 Database::Database(string path)
 {
     this->path = path;
 }
+
 
 void Database::addSubject(string subject, float grade)
 {
@@ -16,6 +19,7 @@ void Database::addSubject(string subject, float grade)
 
     writer << endl << subject << " " << grade;
 }
+
 
 void Database::addTest(string subject, string text, float grade, int points)
 {
@@ -39,6 +43,7 @@ void Database::addTest(string subject, string text, float grade, int points)
     writer << fileContent;
     writer.close();
 }
+
 
 void Database::setGrade(string subject, float grade)
 {
@@ -65,6 +70,7 @@ void Database::setGrade(string subject, float grade)
     writer << fileContent;
     writer.close();
 }
+
 
 float Database::calculateAverage()
 {
@@ -95,6 +101,7 @@ float Database::calculateAverage()
     return sum / count;
 }
 
+
 bool Database::isPositive()
 {
     ifstream reader(this->path);
@@ -118,6 +125,7 @@ bool Database::isPositive()
 
     return true;
 }
+
 
 void Database::setPath(string path)
 {

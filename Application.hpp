@@ -2,9 +2,11 @@
 #define APPLICATION_HPP
 
 #include <QMainWindow>
+#include <QListView>
 #include <QWidget>
 #include <QTableWidget>
 #include <QVBoxLayout>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -21,14 +23,14 @@ public:
     Application(QWidget *parent = nullptr);
     ~Application();
 
+    void listSubjects(unsigned int year);
+
 private:
     QTableWidget *tableWidget;
+    Ui::Application *ui;
+    QListView *listView;
 
 private slots:
-    void on_actiondfg_2_triggered(bool checked);
-
-    void on_AddSubject_triggered(bool checked);
-
     void on_addSubject_triggered(bool checked);
 
     void on_addGrade_triggered(bool checked);
@@ -36,8 +38,6 @@ private slots:
     void on_removeGrade_triggered(bool checked);
 
     void on_removeSubject_triggered(bool checked);
-
-private:
-    Ui::Application *ui;
+    void on_listView_objectNameChanged(const QString &objectName);
 };
 #endif // APPLICATION_HPP
