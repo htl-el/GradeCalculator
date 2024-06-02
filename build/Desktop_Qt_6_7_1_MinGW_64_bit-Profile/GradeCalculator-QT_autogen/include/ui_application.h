@@ -28,10 +28,10 @@ QT_BEGIN_NAMESPACE
 class Ui_Application
 {
 public:
-    QAction *AddSubject;
-    QAction *AddGrade;
-    QAction *RemoveGrade;
-    QAction *actiondfg_2;
+    QAction *addSubject;
+    QAction *addGrade;
+    QAction *removeGrade;
+    QAction *removeSubject;
     QAction *actionImpressum;
     QAction *actionKontakt;
     QAction *actionHilfe;
@@ -50,15 +50,15 @@ public:
     {
         if (Application->objectName().isEmpty())
             Application->setObjectName("Application");
-        Application->resize(800, 600);
-        AddSubject = new QAction(Application);
-        AddSubject->setObjectName("AddSubject");
-        AddGrade = new QAction(Application);
-        AddGrade->setObjectName("AddGrade");
-        RemoveGrade = new QAction(Application);
-        RemoveGrade->setObjectName("RemoveGrade");
-        actiondfg_2 = new QAction(Application);
-        actiondfg_2->setObjectName("actiondfg_2");
+        Application->resize(819, 598);
+        addSubject = new QAction(Application);
+        addSubject->setObjectName("addSubject");
+        addGrade = new QAction(Application);
+        addGrade->setObjectName("addGrade");
+        removeGrade = new QAction(Application);
+        removeGrade->setObjectName("removeGrade");
+        removeSubject = new QAction(Application);
+        removeSubject->setObjectName("removeSubject");
         actionImpressum = new QAction(Application);
         actionImpressum->setObjectName("actionImpressum");
         actionKontakt = new QAction(Application);
@@ -123,7 +123,7 @@ public:
         Application->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Application);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 819, 25));
         menuExtras = new QMenu(menubar);
         menuExtras->setObjectName("menuExtras");
         menuCredits = new QMenu(menubar);
@@ -141,10 +141,10 @@ public:
         menuCredits->addAction(actionImpressum);
         menuCredits->addAction(actionKontakt);
         menuCredits->addAction(actionHilfe);
-        Options->addAction(AddSubject);
-        Options->addAction(AddGrade);
-        Options->addAction(RemoveGrade);
-        Options->addAction(actiondfg_2);
+        Options->addAction(addSubject);
+        Options->addAction(addGrade);
+        Options->addAction(removeGrade);
+        Options->addAction(removeSubject);
 
         retranslateUi(Application);
 
@@ -154,10 +154,10 @@ public:
     void retranslateUi(QMainWindow *Application)
     {
         Application->setWindowTitle(QCoreApplication::translate("Application", "Application", nullptr));
-        AddSubject->setText(QCoreApplication::translate("Application", "Add Subject", nullptr));
-        AddGrade->setText(QCoreApplication::translate("Application", "Add Grade", nullptr));
-        RemoveGrade->setText(QCoreApplication::translate("Application", "Remove Grade", nullptr));
-        actiondfg_2->setText(QCoreApplication::translate("Application", "Remove Subject", nullptr));
+        addSubject->setText(QCoreApplication::translate("Application", "Add Subject", nullptr));
+        addGrade->setText(QCoreApplication::translate("Application", "Add Grade", nullptr));
+        removeGrade->setText(QCoreApplication::translate("Application", "Remove Grade", nullptr));
+        removeSubject->setText(QCoreApplication::translate("Application", "Remove Subject", nullptr));
         actionImpressum->setText(QCoreApplication::translate("Application", "Impressum", nullptr));
         actionKontakt->setText(QCoreApplication::translate("Application", "Kontakt", nullptr));
         actionHilfe->setText(QCoreApplication::translate("Application", "Hilfe", nullptr));

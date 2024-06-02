@@ -2,6 +2,9 @@
 #define APPLICATION_HPP
 
 #include <QMainWindow>
+#include <QWidget>
+#include <QTableWidget>
+#include <QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -17,6 +20,9 @@ class Application : public QMainWindow
 public:
     Application(QWidget *parent = nullptr);
     ~Application();
+
+private:
+    QTableWidget *tableWidget;
 
 private slots:
     void on_actiondfg_2_triggered(bool checked);
