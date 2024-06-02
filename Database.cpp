@@ -52,7 +52,8 @@ void Database::setGrade(string subject, float grade)
 
         if (found != string::npos)
         {
-            line = subject + " " + to_string(grade);
+            size_t gradeStart = line.find_last_of(" ") + 1;
+            line = line.substr(0, gradeStart) + to_string(grade);
         }
 
         fileContent += line + "\n";

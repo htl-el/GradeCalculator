@@ -10,7 +10,8 @@ int main(int argc, char *argv[])
     w.show();
 
     Database data("list.txt");
-    data.addSubject("Mathe", 5);
+    data.addTest("NW", "Test123", 1, 100);
+    data.setGrade("NW", 4);
 
     return a.exec();
 }
